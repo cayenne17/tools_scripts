@@ -9,12 +9,10 @@ sleep 1
 am broadcast -a fr.enb_analytics.enb4g.RECORD_TRACES_ON fr.enb_analytics.enb4g
 #am broadcast -a fr.enb_analytics.enb4g.RECORD_TRACES_OFF fr.enb_analytics.enb4g
 
-am broadcast -a fr.enb_analytics.enb4g.RECORD_STUMBLER_ON fr.enb_analytics.enb4g
-#am broadcast -a fr.enb_analytics.enb4g.RECORD_STUMBLER_OFF fr.enb_analytics.enb4g
+#am broadcast -a fr.enb_analytics.enb4g.RECORD_STUMBLER_ON fr.enb_analytics.enb4g   #build 214 => supprimé et fusionné avec RECORD_TRACES_ON
+#am broadcast -a fr.enb_analytics.enb4g.RECORD_STUMBLER_OFF fr.enb_analytics.enb4g  #build 214 => supprimé et fusionné avec RECORD_TRACES_OFF
 #eNB Analytics
 ##############
-
-
 
 ##############
 #TowerCollector
@@ -53,3 +51,6 @@ am start com.nperf.tester/.Activity.SplashScreenActivity
 #nPerf
 ##############
 
+
+#end
+am startservice -a com.termux.service_stop com.termux/.app.TermuxService
